@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/math-game/static/css/main.6b5d52ec.chunk.css",
-    "main.js": "/math-game/static/js/main.d7674c6a.chunk.js",
-    "main.js.map": "/math-game/static/js/main.d7674c6a.chunk.js.map",
+    "main.js": "/math-game/static/js/main.aea8d477.chunk.js",
+    "main.js.map": "/math-game/static/js/main.aea8d477.chunk.js.map",
     "runtime-main.js": "/math-game/static/js/runtime-main.aee31a93.js",
     "runtime-main.js.map": "/math-game/static/js/runtime-main.aee31a93.js.map",
     "static/js/2.1dd73a58.chunk.js": "/math-game/static/js/2.1dd73a58.chunk.js",
     "static/js/2.1dd73a58.chunk.js.map": "/math-game/static/js/2.1dd73a58.chunk.js.map",
     "index.html": "/math-game/index.html",
-    "precache-manifest.c430c913672c7b01b6e134121dc68f08.js": "/math-game/precache-manifest.c430c913672c7b01b6e134121dc68f08.js",
+    "precache-manifest.b1a7e6293bc892180b79e822ec9fe75f.js": "/math-game/precache-manifest.b1a7e6293bc892180b79e822ec9fe75f.js",
     "service-worker.js": "/math-game/service-worker.js",
     "static/css/main.6b5d52ec.chunk.css.map": "/math-game/static/css/main.6b5d52ec.chunk.css.map",
     "static/js/2.1dd73a58.chunk.js.LICENSE.txt": "/math-game/static/js/2.1dd73a58.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.aee31a93.js",
     "static/js/2.1dd73a58.chunk.js",
     "static/css/main.6b5d52ec.chunk.css",
-    "static/js/main.d7674c6a.chunk.js"
+    "static/js/main.aea8d477.chunk.js"
   ]
 }
