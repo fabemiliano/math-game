@@ -70,6 +70,11 @@ class Main extends React.Component {
       } else {
         this.setState((state) => ({ points: state.points - timer, borderStyle: 'red' }));
       } break;
+      case 3: if (left / right === Number(answer)) {
+        this.setState((state) => ({ points: state.points + timer, borderStyle: 'green' }));
+      } else {
+        this.setState((state) => ({ points: state.points - timer, borderStyle: 'red' }));
+      } break;
       default: if (left - right === Number(answer)) {
         this.setState((state) => ({ points: state.points + timer, borderStyle: 'green' }));
       } else {
@@ -80,24 +85,56 @@ class Main extends React.Component {
 
   generateQuestion() {
     const { points } = this.state;
-    const operator = Math.floor(Math.random() * 3);
+    const operator = Math.floor(Math.random() * 4);
     let left;
     let right;
     if (points < 100) {
       left = Math.floor(Math.random() * 10);
-      right = Math.floor(Math.random() * 10);
+      if (operator !== 3) {
+        right = Math.floor(Math.random() * 10);
+      } else {
+        let aux = Math.floor(Math.random() * 10);
+        while (left % aux !== 0) {
+          aux = Math.floor(Math.random() * 10);
+        }
+        right = aux;
+      }
     } else if (points < 200) {
       left = Math.floor(Math.random() * 100);
-      right = Math.floor(Math.random() * 10);
+      if (operator !== 3) {
+        right = Math.floor(Math.random() * 10);
+      } else {
+        while (left % right !== 0) {
+          right = Math.floor(Math.random() * 10);
+        }
+      }
     } else if (points < 300) {
       left = Math.floor(Math.random() * 100);
-      right = Math.floor(Math.random() * 100);
+      if (operator !== 3) {
+        right = Math.floor(Math.random() * 100);
+      } else {
+        while (left % right !== 0) {
+          right = Math.floor(Math.random() * 100);
+        }
+      }
     } else if (points < 400) {
       left = Math.floor(Math.random() * 1000);
-      right = Math.floor(Math.random() * 100);
+      if (operator !== 3) {
+        right = Math.floor(Math.random() * 100);
+      } else {
+        while (left % right !== 0) {
+          right = Math.floor(Math.random() * 100);
+        }
+      }
     } else {
       left = Math.floor(Math.random() * 1000);
-      right = Math.floor(Math.random() * 1000);
+      if (operator !== 3) {
+        right = Math.floor(Math.random() * 1000);
+      } else {
+        while (left % right !== 0) {
+          right = Math.floor(Math.random() * 1000);
+        }
+      }
     }
     this.setState({ left, right, operator });
   }
@@ -113,6 +150,7 @@ class Main extends React.Component {
     switch (operator) {
       case 1: return (<p>{`${left} x ${right}`}</p>);
       case 2: return (<p>{`${left} + ${right}`}</p>);
+      case 3: return (<p>{`${left} ÷ ${right}`}</p>);
       default: return (<p>{`${left} - ${right}`}</p>);
     }
   }

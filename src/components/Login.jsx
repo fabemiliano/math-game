@@ -16,7 +16,9 @@ class Login extends React.Component {
   }
 
   render() {
-    const { country, countryCode, player, buttonEnabled } = this.state;
+    const {
+      country, countryCode, player, buttonEnabled,
+    } = this.state;
     const { doLogin, getPlayerInfo } = this.props;
     return (
       <div className="login-main">
@@ -24,9 +26,9 @@ class Login extends React.Component {
           <h1>MATH GAME</h1>
         </div>
         <div className="player-info">
-          <p>Your name:</p> 
-          <input onChange={(e) => this.setState({ player: e.target.value, buttonEnabled: false })} value={player} />
-          <div class="country-selection">
+          <p>Your name:</p>
+          <input onKeyDown={(e) => { if (e.keyCode === 13) { doLogin(); getPlayerInfo(player, countryCode); } }} onChange={(e) => this.setState({ player: e.target.value, buttonEnabled: false })} value={player} />
+          <div className="country-selection">
             <p>Choose your country:</p>
             <select
               onChange={(e) => {
