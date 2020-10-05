@@ -15,4 +15,4 @@ In the end a scoreboard is shown.
 
 In the beggining you can choose a flag as a avatar.
 
-A deployed version of the application can be found on: www.fabemiliano.github.io/math-game
+A deployed version of the application can be found on: fabemiliano.github.io/math-game
