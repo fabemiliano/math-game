@@ -31,8 +31,8 @@ class Main extends React.Component {
         this.generateQuestion();
       }
       if (mainTimer === 0) {
-        goToLeaderBoard();
         saveScore(player, countryCode, points);
+        goToLeaderBoard();
       }
     }, 1000);
   }
